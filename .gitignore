@@ -1,0 +1,6 @@
+# backend
+/backend/.idea
+/backend/build
+# frontend
+/frontend/build
+.DS_Store
