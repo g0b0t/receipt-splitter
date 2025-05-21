@@ -8,6 +8,7 @@ plugins {
     kotlin("jvm") version "2.1.10"
     id("io.ktor.plugin") version "3.0.2"
     id("org.jetbrains.kotlin.plugin.serialization") version "2.1.10"
+    id("org.flywaydb.flyway") version "10.11.0"
 }
 
 group = "com.gobot"
@@ -33,4 +34,10 @@ dependencies {
     implementation("io.ktor:ktor-server-config-yaml")
     testImplementation("io.ktor:ktor-server-test-host")
     testImplementation("org.jetbrains.kotlin:kotlin-test-junit:$kotlin_version")
+    implementation("org.flywaydb:flyway-core:10.11.0")
+    implementation("ch.qos.logback:logback-classic:1.4.14")
+}
+
+java {
+    toolchain.languageVersion.set(JavaLanguageVersion.of(21))
 }
